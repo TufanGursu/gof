@@ -1,0 +1,241 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.example.designpatterns.creational.factorymethod.pizza.PizzaFactory#createPizza(String)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.example.designpatterns.creational.factorymethod.pizza.PizzaFactory",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1611567195 { 
+   	label=designpatterns
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1461347441 { 
+   	label=VeggiePizza
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   VeggiePizza737440128XXXaddIngredients0[
+	label="+ addIngredients()"
+	style=filled
+	fillcolor=white
+	tooltip="VeggiePizza
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1854160029 { 
+   	label=CheesePizza
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CheesePizza737440128XXXaddIngredients0[
+	label="+ addIngredients()"
+	style=filled
+	fillcolor=white
+	tooltip="CheesePizza
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_256435426 { 
+   	label=PizzaFactoryTest
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PizzaFactoryTest737440128XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="PizzaFactoryTest
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_441559391 { 
+   	label=BasePizzaFactory
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   BasePizzaFactory737440128XXXcreatePizza1808118735[
+	label="+ createPizza()"
+	style=filled
+	fillcolor=white
+	tooltip="BasePizzaFactory
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_563255726 { 
+   	label=PepperoniPizza
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PepperoniPizza737440128XXXaddIngredients0[
+	label="+ addIngredients()"
+	style=filled
+	fillcolor=white
+	tooltip="PepperoniPizza
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_622950534 { 
+   	label=Pizza
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Pizza737440128XXXaddIngredients0[
+	label="+ addIngredients()"
+	style=filled
+	fillcolor=white
+	tooltip="Pizza
+
+null"
+	fontcolor=darkgreen
+];
+
+Pizza737440128XXXbakePizza0[
+	label="+ bakePizza()"
+	style=filled
+	fillcolor=white
+	tooltip="Pizza
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_830391344 { 
+   	label=PizzaFactory
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PizzaFactory737440128XXXcreatePizza1808118735[
+	label="+ createPizza()"
+	style=filled
+	fillcolor=white
+	tooltip="PizzaFactory
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+BasePizzaFactory737440128XXXcreatePizza1808118735 -> PizzaFactory737440128XXXcreatePizza1808118735;
+Pizza737440128XXXaddIngredients0 -> CheesePizza737440128XXXaddIngredients0;
+Pizza737440128XXXaddIngredients0 -> PepperoniPizza737440128XXXaddIngredients0;
+Pizza737440128XXXaddIngredients0 -> VeggiePizza737440128XXXaddIngredients0;
+PizzaFactory737440128XXXcreatePizza1808118735 -> Pizza737440128XXXaddIngredients0;
+PizzaFactory737440128XXXcreatePizza1808118735 -> Pizza737440128XXXbakePizza0;
+PizzaFactoryTest737440128XXXmain1859653459 -> BasePizzaFactory737440128XXXcreatePizza1808118735;
+    
+}
+@enduml

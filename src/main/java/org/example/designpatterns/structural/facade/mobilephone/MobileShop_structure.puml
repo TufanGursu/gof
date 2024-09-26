@@ -1,0 +1,182 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.example.designpatterns.structural.facade.MobileShop",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1611567195 { 
+   	label=designpatterns
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Blackberry167903092[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Blackberry</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ modelNo()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Iphone167903092[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Iphone</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ modelNo()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MobileShop167903092[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)MobileShop</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ modelNo()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+Samsung167903092[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Samsung</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ modelNo()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ShopKeeper167903092[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ShopKeeper</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   blackberry: MobileShop [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   iphone: MobileShop [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   samsung: MobileShop [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ blackberrySale()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ iphoneSale()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ samsungSale()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+MobileShop167903092 -> Blackberry167903092[arrowhead=none, arrowtail=empty, dir=both];
+MobileShop167903092 -> Iphone167903092[arrowhead=none, arrowtail=empty, dir=both];
+MobileShop167903092 -> Samsung167903092[arrowhead=none, arrowtail=empty, dir=both];
+ShopKeeper167903092 -> MobileShop167903092[label="blackberry
+[0..1]"];
+ShopKeeper167903092 -> MobileShop167903092[label="iphone
+[0..1]"];
+ShopKeeper167903092 -> MobileShop167903092[label="samsung
+[0..1]"];
+    
+}
+@enduml

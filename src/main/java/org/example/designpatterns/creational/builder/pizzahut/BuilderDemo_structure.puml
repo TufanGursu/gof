@@ -1,0 +1,500 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.example.designpatterns.creational.builder.pizzahut.BuilderDemo",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1611567195 { 
+   	label=designpatterns
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   BuilderDemo744439575[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BuilderDemo</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Coke426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Coke</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ColdDrink426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ColdDrink</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ExtraLargeCheesePizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ExtraLargeCheesePizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ExtraLargeOnionPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ExtraLargeOnionPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+ExtraLargePepperoniPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ExtraLargePepperoniPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+LargeCheesePizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)LargeCheesePizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+LargeCoke426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)LargeCoke</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+LargeOnionPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)LargeOnionPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+LargePepperoniPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)LargePepperoniPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+LargePepsi426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)LargePepsi</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MediumCheesePizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MediumCheesePizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MediumCoke426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MediumCoke</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MediumOnionPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MediumOnionPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MediumPepperoniPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MediumPepperoniPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MediumPepsi426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MediumPepsi</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+NonVegPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)NonVegPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+OrderBuilder744439575[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OrderBuilder</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ preparePizza(): OrderedItems</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+OrderedItems744439575[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)OrderedItems</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   items: List&lt;Item&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addItems(item: Item)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ showItems()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Pepsi426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Pepsi</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Pizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Pizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SmallCheesePizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SmallCheesePizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SmallCoke426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SmallCoke</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SmallOnionPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SmallOnionPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SmallPepperoniPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SmallPepperoniPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SmallPepsi426191103[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SmallPepsi</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+VegPizza415360271[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)VegPizza</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ name(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ price(): float</TD></TR>
+<TR><TD ALIGN="LEFT" >+ size(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+BuilderDemo744439575 -> OrderBuilder744439575[label="main() -> preparePizza()"];
+BuilderDemo744439575 -> OrderedItems744439575[label="main() -> showItems()"];
+Coke426191103 -> LargeCoke426191103[arrowhead=none, arrowtail=empty, dir=both];
+Coke426191103 -> MediumCoke426191103[arrowhead=none, arrowtail=empty, dir=both];
+Coke426191103 -> SmallCoke426191103[arrowhead=none, arrowtail=empty, dir=both];
+ColdDrink426191103 -> Coke426191103[arrowhead=none, arrowtail=empty, dir=both];
+ColdDrink426191103 -> Pepsi426191103[arrowhead=none, arrowtail=empty, dir=both];
+NonVegPizza415360271 -> ExtraLargePepperoniPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+NonVegPizza415360271 -> LargePepperoniPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+NonVegPizza415360271 -> MediumPepperoniPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+NonVegPizza415360271 -> SmallPepperoniPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+OrderedItems744439575 -> ColdDrink426191103[arrowhead=none];
+OrderedItems744439575 -> Pizza415360271[arrowhead=none];
+Pepsi426191103 -> LargePepsi426191103[arrowhead=none, arrowtail=empty, dir=both];
+Pepsi426191103 -> MediumPepsi426191103[arrowhead=none, arrowtail=empty, dir=both];
+Pepsi426191103 -> SmallPepsi426191103[arrowhead=none, arrowtail=empty, dir=both];
+Pizza415360271 -> NonVegPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+Pizza415360271 -> VegPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> ExtraLargeCheesePizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> ExtraLargeOnionPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> LargeCheesePizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> LargeOnionPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> MediumCheesePizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> MediumOnionPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> SmallCheesePizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+VegPizza415360271 -> SmallOnionPizza415360271[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
